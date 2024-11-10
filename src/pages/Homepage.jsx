@@ -46,7 +46,7 @@ function Homepage() {
             </div>
 
             <div className='h-[300px] lg:w-[70%]'>
-                <h2 className='lg:text-[20px] text-[14px] lg:ml-10 ml-5 font-bold text-[#00239C] mt-3'>Top Projects</h2>
+                <h2 className='lg:text-[20px] text-[14px] text-center lg:text-left lg:ml-10 ml-5 font-bold text-[#00239C] mt-3'>Top Projects</h2>
                 <div className='lg:flex justify-evenly'>
                     {projects.slice(0,3).map((tProject) => (
                         <div key={tProject.id} className='lg:w-[300px] md:w-[100%] md:h-[550px] md:mb-10 w-[350px] m-[auto] lg:h-[240px] h-[260px] border mt-[10px] shadow-xl lg:rounded-2xl overflow-hidden'>

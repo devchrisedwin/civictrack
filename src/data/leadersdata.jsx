@@ -196,7 +196,7 @@ const leaderdata = [
         id: 7,
         bio: {
             name: 'Jonathan',
-            position: 'senate president',
+            position: 'senate',
             tenure: '1st term',
             state: 'Lagos state',
             party: 'APC',

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
 
-  const [menu, setMenu] = useState(true)
+  const [menu, setMenu] = useState(false)
 
   return (
-    <div className='lg:h-[100px] h-[50px] lg:w-[80%] w-[100%] lg:flex justify-between items-center navbar'>
+    <div className='lg:h-[100px] h-[50px] lg:w-[80%] w-[100%] lg:flex justify-between items-center fixed top-0 bg-white z-[1000]'>
         <div className='flex items-center gap-[-3px] lg:ml-[120px]'>
             <div className='flex items-center gap-[-3px] lg:ml-[120px]'>
               <img src={logo} alt="logo" className='w-20' />
@@ -18,18 +18,19 @@ function Navbar() {
               <p onClick={()=> setMenu(!menu)}>MENU</p>
             </div>
         </div>
-        {menu &&
-        <div className='nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0'>
+        
+        <div className={menu ? 
+          'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0'
+           :'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0 hidden lg:block'}>
             <ul className='lg:flex list-none gap-[25px] ml-[17px] lg:ml-0 cursor-pointer text-[20px] text-white lg:text-[#ff4d01] font-bold'>
-                <Link to='/'><li>Home</li></Link>
-                <Link to='/project-tracker'><li>Project-Tracker</li></Link>
-                <Link to='/forum'><li>Forum</li></Link>
+                <Link to='/'><li onClick={() => setMenu(false)}>Home</li></Link>
+                <Link to='/project-tracker'><li onClick={() => setMenu(false)}>Project-Tracker</li></Link>
+                <Link to='/forum'><li onClick={() => setMenu(false)}>Forum</li></Link>
                 <li>About</li>
                 <li>Contact</li>
-                <Link to='/signup'><li>Signup</li></Link>
+                <Link to='/signup'><li onClick={() => setMenu(false)}>Signup</li></Link>
             </ul>
         </div>
-        }
 
         
     </div>

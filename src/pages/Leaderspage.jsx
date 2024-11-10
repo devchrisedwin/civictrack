@@ -25,30 +25,38 @@ function Leaderspage() {
   }
   
   return (
-    <div className='mt-[100px] border-t leaders-page'>
+
+    <div className='lg:mt-[100px] border-t  lg:grid grid-cols-[400px_630px_400px]'>
       
        <div className='border-r'>
-          <div className='border-b border-l'>
+          <div className='border-b border-l mb-5 lg:mb-0 mt-16 lg:mt-0 flex '>
             <input type="search" placeholder='search a leader' 
             className='outline-none border-none p-3 w-[200px]' />
-            <button className='border w-[150px] p-1 border-[#00239C] rounded-full font-bold'>search</button>
+            <button className='border lg:w-[150px] w-[100px] ml-[auto] lg:ml-0 border-[#00239C] rounded-full font-bold'>search</button>
           </div>
-          {leader.slice(0,8).map((l) => (
-            <div className='flex items-center gap-3 p-6'>
-              <div className='profile-pic flex flex-col items-center justify-center overflow-hidden'>
-                <img src={l.bio.image} alt="" 
-                className='w-[70px] h-[48px] border-r-[50%]' />
+          <div className='flex lg:block overflow-scroll hide-scrollbar'>
+            {leader.slice(0,8).map((l) => (
+
+              <div className='lg:flex items-center lg:gap-3 mb-3 lg:mb-0 lg:p-6 lg:ml-0 ml-4 lg:w-[auto] m-[auto]'>
+
+                <div className='profile-pic w-[80px] m-[auto] flex flex-col items-center justify-center overflow-hidden'>
+                  <img src={l.bio.image} alt="" 
+                  className='w-[70px] h-[48px] border-r-[50%]' />
+                </div>
+
+                <div className='w-[80px] m-[auto] lg:ml-[-100px]'>
+                  <p className='font-bold w-[100px] text-[10px] lg:text-[16px] ml-4 lg:ml-0'>{l.bio.name}</p>
+                  <p className='opacity-[0.7] text-[10px] lg:text-[16px] ml-4 lg:ml-0'>{l.bio.position}</p>
+                </div>
+
               </div>
-              <div>
-                <p className='font-bold'>{l.bio.name}</p>
-                <p className='opacity-[0.7]'>{l.bio.position}</p>
-              </div>
-            </div>
-          ))} 
+            ))} 
+          </div>
+         
        </div>
 
        <div className='flex flex-col gap-6'>
-          <div className='border-b'>
+          <div className='border-b lg:block hidden'>
             <input type="search" placeholder='search project' 
             className='outline-none border-none p-3 w-[400px] indent-3' />
             <button className='border w-[150px] p-1 border-[#00239C] rounded-full font-bold'>search</button>
@@ -60,12 +68,12 @@ function Leaderspage() {
                 <div className='w-[100%] h-[470px] border-b flex flex-col mb-8'>
                   <img src={lp.image} alt="project images" className='w-[100%] h-[350px]' />
                   <div className='pl-3 mt-2'>
-                    <p className='font-bold'>{lp.name.toUpperCase()}</p>
+                    <p className='font-bold text-[13px] lg:text-[16px]'>{lp.name.toUpperCase()}</p>
                     <Rating/>
-                    <p className='font-bold'>{lp.completed ? 'COMPLETED' : 'INPROGRESS'}</p>
+                    <p className='font-bold text-[13px] lg:text-[16px]'>{lp.completed ? 'COMPLETED' : 'INPROGRESS'}</p>
                     <div className='flex justify-between items-center pb-2'>
-                      <p className='opacity-[0.7]'>{`PowerBy: ${p.bio.position} ${p.bio.name}`}</p>
-                      <button onClick={() => handleCommentBox(lp.id)} className='border w-[200px] p-1 rounded-2xl'>comments</button>
+                      <p className='opacity-[0.7] text-[13px] lg:text-[16px]'>{`PowerBy: ${p.bio.position} ${p.bio.name}`}</p>
+                      <button onClick={() => handleCommentBox(lp.id)} className='border lg:w-[200px] w-[100px] mr-2 p-1 rounded-2xl'>comments</button>
                     </div>
                   </div>
 
@@ -89,7 +97,7 @@ function Leaderspage() {
                   </div>
                   <div className='flex items-center gap-2'>
                     <form onSubmit={handleSubmit} className='flex items-center gap-2'>
-                      <textarea onChange={(e) => setInputValue(e.target.value)} value={inputValue} name="" id="" className='indent-3 border bg-white w-[400px] rounded-2xl ml-3 p-3'></textarea>
+                      <textarea onChange={(e) => setInputValue(e.target.value)} value={inputValue} name="" id="" className='lg:indent-3 border bg-white lg:w-[400px] w-[230px] lg:rounded-2xl ml-3 lg:p-3 p-2'></textarea>
                       <button className='bg-[#00239C] text-white ont-bold w-[100px] p-2 rounded-full'>send</button>
                     </form>
                   </div>
