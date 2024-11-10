@@ -12,10 +12,10 @@ function Forum() {
     }
 
   return (
-    <div className='mt-[100px] border w-[75%] m-[auto] grid grid-cols-2 rounded-xl shadow-xl'>
+    <div className='mt-[100px] border w-[75%] h-[650px] m-[auto] grid grid-cols-2 rounded-xl shadow-xl'>
         <div className='border-r'>
             <h3 className='font-bold ml-4'>Dicussion Forum</h3>
-            <div className='w-[100%] h-[400px] comment'>
+            <div className='w-[100%] h-[520px] comment'>
                 {data.length !== 0 ?
                 <p className='opacity-[0.5] ml-5 border-b mb-7'>{data.length > 1 ? `${data.length} comments` : `${data.length} comment`}</p> : ""}
                 {data.length ? data.map((item) => (
@@ -26,7 +26,7 @@ function Forum() {
                 )): <p className='text-center font-bold mt-5'>No Comment Yet</p>}
             </div>
             <div className='flex items-center gap-2'>
-                <form onSubmit={handleSubmit} className='flex items-center gap-3 mt-3'>
+                <form onSubmit={handleSubmit} className='flex items-center gap-3 mt-1'>
                     <textarea onChange={(e) => setInputValue(e.target.value)} value={inputValue} name="" id="" className='p-3 border bg-white w-[300px] indent-3 ml-3'></textarea>
                     <button className='bg-[#00239C] text-white ont-bold w-[100px] p-2 rounded-full'>send</button>
                 </form>

@@ -11,7 +11,7 @@ import Forum from './pages/Forum'
 function App() {
 
   return (
-   <div className='w-[80%] m-[auto]'>
+   <div className='lg:w-[80%] lg:m-[auto] w-[100%] overflow-x-hidden'>
       <Navbar/>
       <LeaderContextProvider>
           <Routes>
