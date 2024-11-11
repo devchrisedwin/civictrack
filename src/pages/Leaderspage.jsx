@@ -26,13 +26,13 @@ function Leaderspage() {
   
   return (
 
-    <div className='lg:mt-[100px] border-t  lg:grid grid-cols-[400px_630px_400px]'>
+    <div className='lg:mt-[100px] border-t  lg:grid grid-cols-[300px_630px_400px]'>
       
        <div className='border-r'>
-          <div className='border-b border-l mb-5 lg:mb-0 mt-16 lg:mt-0 flex '>
+          <div className='border-b border-l mb-5 lg:mb-0 mt-16 lg:mt-0'>
             <input type="search" placeholder='search a leader' 
-            className='outline-none border-none p-3 w-[200px]' />
-            <button className='border lg:w-[150px] w-[100px] ml-[auto] lg:ml-0 border-[#00239C] rounded-full font-bold'>search</button>
+            className='outline-none border-none p-[12px] w-[160px]' />
+            <button className='border w-[100px] lg:ml-8 border-[#00239C] rounded-full font-bold'>search</button>
           </div>
           <div className='flex lg:block overflow-scroll hide-scrollbar'>
             {leader.slice(0,8).map((l) => (
@@ -44,9 +44,9 @@ function Leaderspage() {
                   className='w-[70px] h-[48px] border-r-[50%]' />
                 </div>
 
-                <div className='w-[80px] m-[auto] lg:ml-[-100px]'>
-                  <p className='font-bold w-[100px] text-[10px] lg:text-[16px] ml-4 lg:ml-0'>{l.bio.name}</p>
-                  <p className='opacity-[0.7] text-[10px] lg:text-[16px] ml-4 lg:ml-0'>{l.bio.position}</p>
+                <div className='w-[80px] m-[auto] lg:ml-[-50px]'>
+                  <p className='font-bold w-[100px] text-[10px] lg:text-[16px] ml-5 lg:ml-0'>{l.bio.name}</p>
+                  <p className='opacity-[0.7] text-[10px] lg:text-[16px] ml-5 lg:ml-0'>{l.bio.position}</p>
                 </div>
 
               </div>

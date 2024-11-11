@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='lg:h-[420px] bg-[#00239C]'>
+    <div className='lg:h-[420px] bg-[#00239C] lg:mt-10'>
         <div className='lg:flex justify-evenly text-white text-[27px]'>
         <div className='lg:mt-[80px] ml-8 lg:ml-0 pt-[20px] lg:pt-0'>
             <h2 className='text-[#ff4d01] lg:text-[35px] text-[15px] pb-4'>Links</h2>
