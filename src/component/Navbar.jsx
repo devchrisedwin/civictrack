@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import logo from '../assets/icons/civiclogo.png'
 import { Link } from 'react-router-dom'
+import { HiMenu } from 'react-icons/hi';
 
 function Navbar() {
 
@@ -14,8 +15,8 @@ function Navbar() {
               <h3 className='ml-[-15px] text-[14px] font-bold'>CivicTrack</h3>
             </div>
             
-            <div className='ml-[100px] lg:hidden'>
-              <p onClick={()=> setMenu(!menu)}>MENU</p>
+            <div className='ml-[160px] lg:hidden'>
+              <HiMenu size={35} onClick={()=> setMenu(!menu)}/>
             </div>
         </div>
         
