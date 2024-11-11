@@ -12,7 +12,7 @@ function Forum() {
     }
 
   return (
-    <div className='mt-[100px] border lg:w-[75%] h-[650px] m-[auto] lg:grid grid-cols-2 shadow-xl'>
+    <div className='mt-[100px] border lg:w-[95%] h-[650px] m-[auto] lg:grid grid-cols-2 shadow-xl'>
         <div className='border-r'>
             <h3 className='font-bold ml-4'>Dicussion Forum</h3>
             <div className='w-[100%] h-[520px] comment'>
