@@ -11,7 +11,7 @@ function Navbar() {
         <div className='flex items-center gap-[-3px] lg:ml-[60px]'>
             <div className='flex items-center gap-[-3px] lg:ml-[90px] lg:w-[160px]'>
               <img src={logo} alt="logo" className='w-20' />
-              <h3 className='ml-[-15px] text-[18px] font-bold'>CivicTrack</h3>
+              <h3 className='ml-[-15px] text-[14px] font-bold'>CivicTrack</h3>
             </div>
             
             <div className='ml-[100px] lg:hidden'>
@@ -22,7 +22,7 @@ function Navbar() {
         <div className={menu ? 
           'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0'
            :'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0 hidden lg:block'}>
-            <ul className='lg:flex lg:w-[650px] list-none gap-[25px] ml-[17px] lg:ml-[100px] cursor-pointer text-[20px] text-white lg:text-[#ff4d01] font-bold'>
+            <ul className='lg:flex lg:w-[650px] list-none gap-[25px] ml-[17px] lg:ml-[100px] cursor-pointer text-[14px] text-white lg:text-[#ff4d01] font-bold'>
                 <Link to='/'><li onClick={() => setMenu(false)}>Home</li></Link>
                 <Link to='/project-tracker'><li onClick={() => setMenu(false)}>Project-Tracker</li></Link>
                 <Link to='/forum'><li onClick={() => setMenu(false)}>Forum</li></Link>
