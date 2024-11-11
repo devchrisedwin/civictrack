@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 function Login() {
   return (
-    <div className='mt-[100px] border-t'>
-        <form className='flex flex-col border border-grey shadow-xl w-[500px] m-[auto] p-3 rounded-2xl mt-[150px]'>
+    <div className='mt-[70px] border-t'>
+        <form className='flex flex-col border border-grey shadow-xl lg:w-[500px] w-[90%] m-[auto] p-3 rounded-2xl mt-[90px]'>
             <h3 className='font-bold text-center text-[25px] text-[#ff4d01]'>Login</h3>
             <Input 
                 label={'username'}

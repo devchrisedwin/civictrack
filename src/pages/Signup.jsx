@@ -9,11 +9,11 @@ function Signup() {
         setSignUpAsLeader(!signupAsLeader)
     }
   return (
-    <div className='mt-[100px] border-t'>
+    <div className='mt-[70px] border-t'>
         {!signupAsLeader ?
-        <form className='flex flex-col border border-grey shadow-xl w-[500px] m-[auto] p-3 rounded-2xl mt-[150px]'>
+        <form className='flex flex-col border border-grey shadow-xl lg:w-[500px] w-[90%] m-[auto] p-3 rounded-2xl lg:mt-[50px] mt-6'>
             <h3 className='font-bold text-center text-[25px] text-[#ff4d01]'>Sign Up</h3>
-            <p onClick={handleSwichForm} className='text-center text-[#00239C] cursor-pointer font-bold'>{signupAsLeader ? 'sign up as normal user?' : 'Sign up as a Leader?'}</p>
+            <p onClick={handleSwichForm} className='text-center text-[#00239C] cursor-pointer font-bold mb-5'>{signupAsLeader ? 'sign up as normal user?' : 'Sign up as a Leader?'}</p>
             <Input 
                 label={'username'}
                 type={'text'}
@@ -35,13 +35,13 @@ function Signup() {
                 name={'password'}
                 value={'username'}
             />
-            <button className='bg-[#ff4d01] text-white w-[300px] m-[auto] mt-4 rounded-2xl p-2 font-bold'>submit</button>
+            <button className='bg-[#ff4d01] text-white lg:w-[300px] w-[80%] m-[auto] mt-4 rounded-2xl p-2 font-bold'>submit</button>
             <p className='text-center cursor-pointer'>already have an account? <Link to='/login'><span className='text-[#ff4d01]'>login</span></Link></p>
         </form> :
 
-        <form className='mb-4 flex flex-col border border-grey shadow-xl w-[500px] m-[auto] p-3 rounded-2xl mt-[70px]'>
-            <h3 className='font-bold text-center text-[25px] text-[#ff4d01]'>Sign Up</h3>
-            <p onClick={handleSwichForm} className='text-center text-[#00239C] cursor-pointer font-bold'>{signupAsLeader ? 'Sign up as a Normal User?' : 'Sign up as a Leader?'}</p>
+        <form className='mb-4 flex flex-col border border-grey shadow-xl lg:w-[500px] w-[90%] m-[auto] p-3 rounded-xl lg:mt-[50px] mt-6'>
+            <h3 className='font-bold text-center text-[15px] text-[#ff4d01]'>Sign Up</h3>
+            <p onClick={handleSwichForm} className='text-center text-[#00239C] cursor-pointer font-bold mb-5'>{signupAsLeader ? 'Sign up as a Normal User?' : 'Sign up as a Leader?'}</p>
             <Input 
                 label={'username'}
                 type={'text'}
@@ -77,7 +77,7 @@ function Signup() {
                 name={'state'}
                 value={'username'}
             />
-            <button className='bg-[#ff4d01] text-white w-[300px] m-[auto] mt-4 rounded-2xl p-2 font-bold'>submit</button>
+            <button className='bg-[#ff4d01] text-white lg:w-[300px] w-[90%] m-[auto] mt-4 rounded-2xl p-2 font-bold'>submit</button>
             <p className='text-center cursor-pointer'>already have an account? <Link to='/login'><span className='text-[#ff4d01]'>login</span></Link></p>
         </form>
         }

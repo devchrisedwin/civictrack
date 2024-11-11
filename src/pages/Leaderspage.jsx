@@ -26,7 +26,7 @@ function Leaderspage() {
   
   return (
 
-    <div className='lg:mt-[100px] border-t  lg:grid grid-cols-[300px_630px_400px]'>
+    <div className='lg:mt-[70px] border-t  lg:grid grid-cols-[300px_600px_430px]'>
       
        <div className='border-r'>
           <div className='border-b border-l mb-5 lg:mb-0 mt-16 lg:mt-0'>
