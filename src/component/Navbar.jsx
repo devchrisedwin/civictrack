@@ -27,7 +27,7 @@ function Navbar() {
                 <Link to='/'><li onClick={() => setMenu(false)}>Home</li></Link>
                 <Link to='/project-tracker'><li onClick={() => setMenu(false)}>Project-Tracker</li></Link>
                 <Link to='/forum'><li onClick={() => setMenu(false)}>Forum</li></Link>
-                <li>About</li>
+                <Link to='/about'><li onClick={() => setMenu(false)}>About</li></Link>
                 <li>Contact</li>
                 <Link to='/signup'><li onClick={() => setMenu(false)}>Signup</li></Link>
             </ul>

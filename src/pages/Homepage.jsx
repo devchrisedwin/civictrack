@@ -4,6 +4,7 @@ import Footer from '../component/Footer'
 import projects from '../data/project'
 import Rating from '../component/Rating'
 import { LeaderContext } from '../context/LeaderContext'
+import Hero from '../component/Hero'
 
 
 
@@ -17,25 +18,7 @@ function Homepage() {
 
   return (
     <div className='lg:pt-11 overflow-hidden'>
-        <div className='lg:flex h-[500px] w-[100%]'>
-            <div className='bg-[#00239C] lg:w-[600px] w-[100%] mt-[-50px] lg:mt-0'>
-                <h2 className='lg:text-[30px] text-[25px] pt-9 lg:pt-0 text-[#ff4d01] font-bold lg:mt-[150px] mt-[100px] lg:w-[400px] w-[300px] lg:ml-[75px] ml-[35px]'>
-                Track Your Leaders' Promises in Real-Time</h2>
-
-                <p className='lg:w-[400px] w-[300px] mt-[10px] lg:mt-0 font-bold lg:text-[15px] text-white lg:ml-[75px] ml-[35px]'>
-                Our platform offers an easy way to track progress, 
-                see achievements, and hold leaders accountable. Join us in building
-                a more transparent community.
-                </p>
-                <button className='bg-[#ff4d01] text-white lg:p-5 p-2 lg:w-[200px] w-[150px] rounded lg:ml-[75px] ml-[35px] mt-5 lg:text-[20px] mb-7 lg:mb-0'>
-                 Explore More
-                </button>
-            </div>
-
-            <div className='overflow-x-hidden'>
-                <img src={city} alt="" className='lg:h-[500px] h-[350px] w-[100%]' />
-            </div>
-        </div>
+        <Hero/>
         <div className='lg:flex w-[100%]'>
             <div className='lg:h-[320px] lg:w-[30%] w-[100%] h-[400px] bg-[#ff4d01] lg:mt-[-60px] lg:ml-[5%]'>
                 <p className='text-white lg:text-[17px] font-bold lg:p-8 p-6 pt-[180px] mt-6 lg:w-[300px] w-[300px]'>
@@ -65,21 +48,21 @@ function Homepage() {
         <h2 className='lg:pt-8 text-[15px] font-bold text-center lg:text-left lg:ml-5 mb-3 lg:mb-0'>Explore Different Project</h2>
         <div className='lg:flex justify-between lg:mt-3 m-[auto]'>
             {project.slice(0, 4).map((project) => (
-                <div key={project.id} className='w-[340px] h-[330px] lg:h-[290px] lg:w-[250px] m-[auto] md:w-[100%] md:h-[580px] md:mb-10 shadow-xl lg:rounded-xl overflow-hidden mb-5 lg:mb-0'>
-                    <img src={project.image} alt="" className='w-[345px] h-[251px] md:w-[100%] md:h-[500px] lg:h-[211px] lg:w-[280px]' />
+                <div key={project.id} className='w-[340px] h-[330px] lg:h-[230px] lg:w-[240px] m-[auto] md:w-[100%] md:h-[580px] md:mb-10 shadow-xl lg:rounded-xl overflow-hidden mb-5 lg:mb-0'>
+                    <img src={project.image} alt="" className='w-[345px] h-[251px] md:w-[100%] md:h-[500px] lg:h-[160px] lg:w-[240px]' />
                     <p className='ml-1 font-bold'>{project.name}</p>
                     <div className='w-[100px] lg:ml-1 ml-1'>
                         <Rating/>
                     </div>
-                    <p className='ml-1 font-bold opacity-[0.5]'>powered by: {project.promiseBy}</p>
+                    <p className='ml-1 font-bold opacity-[0.5] text-[14px]'>powered by: {project.promiseBy}</p>
                 </div>
             ))}
         </div>
         </div>
 
         <div className='lg:flex justify-between hidden lg:visible'>
-            <h2 className='pt-8 text-[20px] font-bold lg:ml-5'>About Us</h2>
-            <h2 className='pt-8 text-[20px] font-bold mr-5'>Meet our Political Leaders</h2>
+            <h2 className='pt-8 text-[15px] font-bold lg:ml-5'>About Us</h2>
+            <h2 className='pt-8 text-[15px] font-bold mr-5'>Meet our Political Leaders</h2>
         </div>
         
         <div className='lg:flex justify-between mt-3 border-t'>
@@ -95,12 +78,12 @@ function Homepage() {
                 <button className='ml-8 border border-[#ff4d01] rounded-full p-3 w-[150px] mt-[-35px] font-bold'>Explore more</button>
                 <p className='lg:hidden font-bold text-center p-1 mt-3'>Meet Our Leaders</p>
             </div>
-            <div className='lg:w-[60%] lg:flex justify-between gap-1 mt-[150px] lg:mt-0'>
+            <div className='lg:w-[60%] lg:flex justify-between gap-1 mt-[60px] lg:mt-0'>
                 {leader.slice(0,3).map((l) => (
-                    <div key={l.id} className='w-[340px] h-[260px] m-[auto] mb-7 lg:mb-0 border bg-[#ff4d01] lg:rounded-xl overflow-hidden shadow-xl'>
-                        <img src={l.bio.image} alt="" className='w-[340px] h-[200px] bg-[#ffff]' />
-                        <p className='ml-2 font-bold text-white'>{l.bio.name}</p>
-                        <p className='ml-2 font-bold text-white opacity-[0.8]'>{l.bio.state} {l.bio.position}</p>
+                    <div key={l.id} className='w-[340px] h-[230px] m-[auto] mb-7 lg:mb-0 bg-[#ff4d01] lg:rounded-xl overflow-hidden shadow-xl'>
+                        <img src={l.bio.image} alt="" className='w-[340px] h-[170px] bg-[#ffff]' />
+                        <p className='ml-2 font-bold text-white text-[14px] mt-2'>{l.bio.name}</p>
+                        <p className='ml-2 font-bold text-white opacity-[0.8] text-[14px]'>{l.bio.state} {l.bio.position}</p>
                     </div>
                 ))}
             </div>

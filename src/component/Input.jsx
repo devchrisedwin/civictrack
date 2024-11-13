@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Input({type, placeholder, name, value, label}) {
+function Input({type, placeholder, name, value, label, onChange}) {
   return (
     <div>
         <label htmlFor={name} className='pb-[20px] font-bold'>{label}</label>
@@ -8,8 +8,9 @@ function Input({type, placeholder, name, value, label}) {
             <input type={type}
                 placeholder={placeholder}
                 name={name}
-                // value={value}
+                value={value}
                 id={name}
+                onChange={onChange}
                 className='border-none outline-none p-3 w-[100%]'
             />
         </div>

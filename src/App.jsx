@@ -7,6 +7,7 @@ import {LeaderContextProvider} from './context/LeaderContext'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Forum from './pages/Forum'
+import About from './pages/About'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/forum' element={<Forum/>}/>
+            <Route path='/about' element={<About/>}/>
           </Routes>
       </LeaderContextProvider>
        
