@@ -80,8 +80,8 @@ function Homepage() {
             </div>
             <div className='lg:w-[60%] lg:flex justify-between gap-1 mt-[60px] lg:mt-0'>
                 {leader.slice(0,3).map((l) => (
-                    <div key={l.id} className='w-[340px] h-[230px] m-[auto] mb-7 lg:mb-0 bg-[#ff4d01] lg:rounded-xl overflow-hidden shadow-xl'>
-                        <img src={l.bio.image} alt="" className='w-[340px] h-[170px] bg-[#ffff]' />
+                    <div key={l.id} className='w-[340px] h-[235px] m-[auto] mb-7 lg:mb-0 bg-[#ff4d01] lg:rounded-xl overflow-hidden shadow-xl'>
+                        <img src={l.bio.image} alt="" className='w-[340px] h-[170px] border bg-[#ffff]' />
                         <p className='ml-2 font-bold text-white text-[14px] mt-2'>{l.bio.name}</p>
                         <p className='ml-2 font-bold text-white opacity-[0.8] text-[14px]'>{l.bio.state} {l.bio.position}</p>
                     </div>

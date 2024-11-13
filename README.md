@@ -40,6 +40,6 @@ CivicTrack is a web app designed to help users track the progress of projects pr
 src/ ├── components/ # Reusable UI components ├── pages/ # Main pages like HomePage, LeadersPage ├── context/ # Context files for global state management ├── data/ # Static data files ├── hooks/ # Custom React hooks └── App.js # Main application component
 
 
-Usage Guide
+## Usage Guide
 - Visit the home page to view project updates.
 - Navigate to `/leaders` to see projects by each leader.
