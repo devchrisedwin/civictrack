@@ -21,14 +21,14 @@ function Navbar() {
         </div>
         
         <div className={menu ? 
-          'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0'
+          'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0 p-3'
            :'nav-link  lg:mr-[200px] bg-[#ff4d01] lg:bg-white mt-[-8px] lg:mt-0 hidden lg:block'}>
             <ul className='lg:flex lg:w-[650px] list-none gap-[25px] ml-[17px] lg:ml-[100px] cursor-pointer text-[14px] text-white lg:text-[#ff4d01] font-bold'>
-                <Link to='/'><li onClick={() => setMenu(false)}>Home</li></Link>
-                <Link to='/project-tracker'><li onClick={() => setMenu(false)}>Project-Tracker</li></Link>
-                <Link to='/forum'><li onClick={() => setMenu(false)}>Forum</li></Link>
-                <Link to='/about'><li onClick={() => setMenu(false)}>About</li></Link>
-                <Link to='/signup'><li onClick={() => setMenu(false)}>Signup</li></Link>
+                <Link to='/'><li onClick={() => setMenu(false)} className='p-2 lg:p-0 text-[18px]'>Home</li></Link>
+                <Link to='/project-tracker'><li onClick={() => setMenu(false)} className='p-2 lg:p-0 text-[18px]'>Project-Tracker</li></Link>
+                <Link to='/forum'><li onClick={() => setMenu(false)} className='p-2 lg:p-0 text-[18px]'>Forum</li></Link>
+                <Link to='/about'><li onClick={() => setMenu(false)} className='p-2 lg:p-0 text-[18px]'>About</li></Link>
+                <Link to='/signup'><li onClick={() => setMenu(false)} className='p-2 lg:p-0 text-[18px]'>Signup</li></Link>
             </ul>
         </div>
 
