@@ -33,7 +33,7 @@ function Signup() {
         })
         .then((response) => {
             console.log(response)
-            console.log(response.message)
+            console.log(response.json())
         })
         .catch((error) => {
             console.log(error)
@@ -82,35 +82,40 @@ function Signup() {
                 type={'text'}
                 placeholder={'enter your username'}
                 name={'username'}
-                value={'username'}
+                value={inputValue.username}
+                onChange={handleChange}
             />
             <Input 
                 label={'Email'}
                 type={'email'}
                 placeholder={'enter your Email'}
                 name={'email'}
-                value={'username'}
+                value={inputValue.email}
+                onChange={handleChange}
             />
             <Input 
                 label={'Password'}
                 type={'password'}
                 placeholder={'enter your Password'}
                 name={'password'}
-                value={'username'}
+                value={inputValue.password}
+                onChange={handleChange}
             />
              <Input 
                 label={'Position'}
                 type={'text'}
                 placeholder={"what's your position / office"}
                 name={'position'}
-                value={'username'}
+                value={inputValue.position}
+                onChange={handleChange}
             />
             <Input 
                 label={'State'}
                 type={'text'}
                 placeholder={"Enter your State"}
                 name={'state'}
-                value={'username'}
+                value={inputValue.state}
+                onChange={handleChange}
             />
             <button className='bg-[#ff4d01] text-white lg:w-[300px] w-[90%] m-[auto] mt-4 rounded-2xl p-2 font-bold'>submit</button>
             <p className='text-center cursor-pointer'>already have an account? <Link to='/login'><span className='text-[#ff4d01]'>login</span></Link></p>
