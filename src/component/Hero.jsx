@@ -9,12 +9,12 @@ function Hero() {
             Track Your Leaders' Promises in Real-Time</h2>
 
             <p className='lg:w-[400px] w-[300px] mt-[10px] lg:mt-0 font-bold lg:text-[15px] text-white lg:ml-[75px] ml-[35px]'>
-            Our platform offers an easy way to track progress, 
-            see achievements, and hold leaders accountable. Join us in building
+            Our platform offers an avenue to track progress, 
+            see achievements, and hold your leaders leaders accountable. Join us in building
             a more transparent community.
             </p>
             <button className='bg-[#ff4d01] text-white p-2 lg:w-[160px] w-[150px] rounded lg:ml-[75px] ml-[35px] mt-5 lg:text-[15px] mb-7 lg:mb-0'>
-            Explore More
+            Edit More to view
             </button>
         </div>
 
